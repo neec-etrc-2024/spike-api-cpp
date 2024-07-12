@@ -1,3 +1,9 @@
+/**
+ * @file UltrasonicSensor.hpp
+ * @brief Ultrasonic Sensor API
+ * @author bukidaiF
+ * @date 2024.7.12
+ */
 #ifndef _SPIKEAPI_ULTRASONIC_SENSOR_H
 #define _SPIKEAPI_ULTRASONIC_SENSOR_H
 
@@ -9,10 +15,20 @@ private:
   pup_device_t *device;
 
 public:
+  /**
+   * @brief Constructor
+   * @param port PUP port ID of the device
+   */
   UltrasonicSensor(pbio_port_id_t port);
-
+  /**
+   * @brief Get the distance by a ultrasonic sensor
+   * @return Distance in centimeters
+   */
   int32_t get_distance();
-
+  /**
+   * @brief Get the presence of an object
+   * @return Presence of an object
+   */
   bool get_presence();
 };
 
