@@ -21,4 +21,10 @@ GyroscopeData Hub::get_angular_velocity() {
 }
 
 float Hub::get_temperature() { return hub_imu_get_temperature(); }
+
+bool Hub::is_button_pressed(hub_button_t button) {
+  hub_button_t pressed;
+  hub_button_is_pressed(&pressed);
+  return (pressed & button) != 0;
+
 } // namespace spikeapi

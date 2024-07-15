@@ -7,6 +7,7 @@
 #ifndef _SPIKEAPI_HUB_H
 #define _SPIKEAPI_HUB_H
 
+#include "hub/button.h"
 #include "spikeapi/AccelerometerData.hpp"
 #include "spikeapi/GyroscopeData.hpp"
 
@@ -37,6 +38,8 @@ public:
    * @return Hubの温度
    */
   float get_temperature();
+
+  bool is_button_pressed(hub_button_t button);
 };
 
 Hub::Hub() {}
