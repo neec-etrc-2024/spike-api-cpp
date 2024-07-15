@@ -1,0 +1,4 @@
+<map id="spikeapi::Motor::setup" name="spikeapi::Motor::setup">
+<area shape="rect" id="node1" title="Setup the motor." alt="" coords="5,13,172,39"/>
+<area shape="rect" id="node2" href="$classspikeapi_1_1_motor.html#abd6fbcbe1a163f69065045b2ce2aaba2" title="回転数をリセットする" alt="" coords="220,5,383,47"/>
+</map>
