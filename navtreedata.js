@@ -25,6 +25,10 @@
 var NAVTREE =
 [
   [ "spikecppapi", "index.html", [
+    [ "spike-api-cpp", "md__r_e_a_d_m_e.html", [
+      [ "API DOC", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
+      [ "LICENSE", "md__r_e_a_d_m_e.html#autotoc_md2", null ]
+    ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ]
     ] ],

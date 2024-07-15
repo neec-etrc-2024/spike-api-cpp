@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['spikeapi_52',['spikeapi',['../namespacespikeapi.html',1,'']]]
+  ['spikeapi_54',['spikeapi',['../namespacespikeapi.html',1,'']]]
 ];
