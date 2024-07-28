@@ -87,41 +87,46 @@ $(document).ready(function(){initNavTree('_hub_8cpp_source.html',''); initResiza
 <div class="contents">
 <a href="_hub_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_hub_8hpp.html">Hub.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;spike/hub/imu.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacespikeapi.html">spikeapi</a> {</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;spike/hub/imu.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;}</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classspikeapi_1_1_hub.html#a8b8294f3e1aa7f1752a7638b1f4c9144">Hub::init</a>() { hub_imu_init(); }</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacespikeapi.html">spikeapi</a> {</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;AccelerometerData <a class="code" href="classspikeapi_1_1_hub.html#a80c6577c22fb8c46a561a6091f9bc7be">Hub::get_acceleration</a>() {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keywordtype">float</span> accel[3];</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  hub_imu_get_acceleration(accel);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  AccelerometerData data = {accel[0], accel[1], accel[2]};</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordflow">return</span> data;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;GyroscopeData <a class="code" href="classspikeapi_1_1_hub.html#a2335d3f7b78472e3513616e9db980ee1">Hub::get_angular_velocity</a>() {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordtype">float</span> angv[3];</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  hub_imu_get_angular_velocity(angv);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  GyroscopeData data = {angv[0], angv[1], angv[2]};</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordflow">return</span> data;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">float</span> <a class="code" href="classspikeapi_1_1_hub.html#af424400c9d7228f41c0d0aabf0cfe8a0">Hub::get_temperature</a>() { <span class="keywordflow">return</span> hub_imu_get_temperature(); }</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classspikeapi_1_1_hub.html#a8b8294f3e1aa7f1752a7638b1f4c9144">    9</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classspikeapi_1_1_hub.html#a8b8294f3e1aa7f1752a7638b1f4c9144">Hub::init</a>() { hub_imu_init(); }</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classspikeapi_1_1_hub.html#a80c6577c22fb8c46a561a6091f9bc7be">   11</a></span>&#160;<a class="code" href="structspikeapi_1_1_accelerometer_data.html">AccelerometerData</a> <a class="code" href="classspikeapi_1_1_hub.html#a80c6577c22fb8c46a561a6091f9bc7be">Hub::get_acceleration</a>() {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keywordtype">float</span> accel[3];</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  hub_imu_get_acceleration(accel);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <a class="code" href="structspikeapi_1_1_accelerometer_data.html">AccelerometerData</a> data = {accel[0], accel[1], accel[2]};</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keywordflow">return</span> data;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classspikeapi_1_1_hub.html#a2335d3f7b78472e3513616e9db980ee1">   18</a></span>&#160;<a class="code" href="classspikeapi_1_1_gyroscope_data.html">GyroscopeData</a> <a class="code" href="classspikeapi_1_1_hub.html#a2335d3f7b78472e3513616e9db980ee1">Hub::get_angular_velocity</a>() {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keywordtype">float</span> angv[3];</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  hub_imu_get_angular_velocity(angv);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <a class="code" href="classspikeapi_1_1_gyroscope_data.html">GyroscopeData</a> data = {angv[0], angv[1], angv[2]};</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordflow">return</span> data;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classspikeapi_1_1_hub.html#a5f376ddf296a856629d735ae8474f2d6">Hub::is_button_pressed</a>(hub_button_t button) {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  hub_button_t pressed;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  hub_button_is_pressed(&amp;pressed);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordflow">return</span> (pressed &amp; button) != 0;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;} <span class="comment">// namespace spikeapi</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classspikeapi_1_1_hub.html#af424400c9d7228f41c0d0aabf0cfe8a0">   25</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="classspikeapi_1_1_hub.html#af424400c9d7228f41c0d0aabf0cfe8a0">Hub::get_temperature</a>() { <span class="keywordflow">return</span> hub_imu_get_temperature(); }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classspikeapi_1_1_hub.html#a5f376ddf296a856629d735ae8474f2d6">   27</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classspikeapi_1_1_hub.html#a5f376ddf296a856629d735ae8474f2d6">Hub::is_button_pressed</a>(hub_button_t button) {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  hub_button_t pressed;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  hub_button_is_pressed(&amp;pressed);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordflow">return</span> (pressed &amp; button) != 0;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;} <span class="comment">// namespace spikeapi</span></div>
 <div class="ttc" id="a_hub_8hpp_html"><div class="ttname"><a href="_hub_8hpp.html">Hub.hpp</a></div><div class="ttdoc">Hub API.</div></div>
-<div class="ttc" id="aclassspikeapi_1_1_hub_html_a2335d3f7b78472e3513616e9db980ee1"><div class="ttname"><a href="classspikeapi_1_1_hub.html#a2335d3f7b78472e3513616e9db980ee1">spikeapi::Hub::get_angular_velocity</a></div><div class="ttdeci">GyroscopeData get_angular_velocity()</div><div class="ttdoc">3軸の角速度を取得する</div></div>
-<div class="ttc" id="aclassspikeapi_1_1_hub_html_a5f376ddf296a856629d735ae8474f2d6"><div class="ttname"><a href="classspikeapi_1_1_hub.html#a5f376ddf296a856629d735ae8474f2d6">spikeapi::Hub::is_button_pressed</a></div><div class="ttdeci">bool is_button_pressed(hub_button_t button)</div></div>
-<div class="ttc" id="aclassspikeapi_1_1_hub_html_a80c6577c22fb8c46a561a6091f9bc7be"><div class="ttname"><a href="classspikeapi_1_1_hub.html#a80c6577c22fb8c46a561a6091f9bc7be">spikeapi::Hub::get_acceleration</a></div><div class="ttdeci">AccelerometerData get_acceleration()</div><div class="ttdoc">3軸の加速度を取得する</div></div>
-<div class="ttc" id="aclassspikeapi_1_1_hub_html_a8b8294f3e1aa7f1752a7638b1f4c9144"><div class="ttname"><a href="classspikeapi_1_1_hub.html#a8b8294f3e1aa7f1752a7638b1f4c9144">spikeapi::Hub::init</a></div><div class="ttdeci">void init()</div><div class="ttdoc">初期化</div></div>
-<div class="ttc" id="aclassspikeapi_1_1_hub_html_af424400c9d7228f41c0d0aabf0cfe8a0"><div class="ttname"><a href="classspikeapi_1_1_hub.html#af424400c9d7228f41c0d0aabf0cfe8a0">spikeapi::Hub::get_temperature</a></div><div class="ttdeci">float get_temperature()</div><div class="ttdoc">温度を取得する</div></div>
+<div class="ttc" id="aclassspikeapi_1_1_gyroscope_data_html"><div class="ttname"><a href="classspikeapi_1_1_gyroscope_data.html">spikeapi::GyroscopeData</a></div><div class="ttdoc">3軸の角速度を格納する構造体</div><div class="ttdef"><b>Definition:</b> <a href="_gyroscope_data_8hpp_source.html#l00015">GyroscopeData.hpp:15</a></div></div>
+<div class="ttc" id="aclassspikeapi_1_1_hub_html_a2335d3f7b78472e3513616e9db980ee1"><div class="ttname"><a href="classspikeapi_1_1_hub.html#a2335d3f7b78472e3513616e9db980ee1">spikeapi::Hub::get_angular_velocity</a></div><div class="ttdeci">GyroscopeData get_angular_velocity()</div><div class="ttdoc">3軸の角速度を取得する</div><div class="ttdef"><b>Definition:</b> <a href="_hub_8cpp_source.html#l00018">Hub.cpp:18</a></div></div>
+<div class="ttc" id="aclassspikeapi_1_1_hub_html_a5f376ddf296a856629d735ae8474f2d6"><div class="ttname"><a href="classspikeapi_1_1_hub.html#a5f376ddf296a856629d735ae8474f2d6">spikeapi::Hub::is_button_pressed</a></div><div class="ttdeci">bool is_button_pressed(hub_button_t button)</div><div class="ttdef"><b>Definition:</b> <a href="_hub_8cpp_source.html#l00027">Hub.cpp:27</a></div></div>
+<div class="ttc" id="aclassspikeapi_1_1_hub_html_a80c6577c22fb8c46a561a6091f9bc7be"><div class="ttname"><a href="classspikeapi_1_1_hub.html#a80c6577c22fb8c46a561a6091f9bc7be">spikeapi::Hub::get_acceleration</a></div><div class="ttdeci">AccelerometerData get_acceleration()</div><div class="ttdoc">3軸の加速度を取得する</div><div class="ttdef"><b>Definition:</b> <a href="_hub_8cpp_source.html#l00011">Hub.cpp:11</a></div></div>
+<div class="ttc" id="aclassspikeapi_1_1_hub_html_a8b8294f3e1aa7f1752a7638b1f4c9144"><div class="ttname"><a href="classspikeapi_1_1_hub.html#a8b8294f3e1aa7f1752a7638b1f4c9144">spikeapi::Hub::init</a></div><div class="ttdeci">void init()</div><div class="ttdoc">初期化</div><div class="ttdef"><b>Definition:</b> <a href="_hub_8cpp_source.html#l00009">Hub.cpp:9</a></div></div>
+<div class="ttc" id="aclassspikeapi_1_1_hub_html_af424400c9d7228f41c0d0aabf0cfe8a0"><div class="ttname"><a href="classspikeapi_1_1_hub.html#af424400c9d7228f41c0d0aabf0cfe8a0">spikeapi::Hub::get_temperature</a></div><div class="ttdeci">float get_temperature()</div><div class="ttdoc">温度を取得する</div><div class="ttdef"><b>Definition:</b> <a href="_hub_8cpp_source.html#l00025">Hub.cpp:25</a></div></div>
 <div class="ttc" id="anamespacespikeapi_html"><div class="ttname"><a href="namespacespikeapi.html">spikeapi</a></div><div class="ttdef"><b>Definition:</b> <a href="_accelerometer_data_8hpp_source.html#l00010">AccelerometerData.hpp:10</a></div></div>
+<div class="ttc" id="astructspikeapi_1_1_accelerometer_data_html"><div class="ttname"><a href="structspikeapi_1_1_accelerometer_data.html">spikeapi::AccelerometerData</a></div><div class="ttdoc">3軸の加速度データを格納する構造体</div><div class="ttdef"><b>Definition:</b> <a href="_accelerometer_data_8hpp_source.html#l00015">AccelerometerData.hpp:15</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -89,28 +89,30 @@ $(document).ready(function(){initNavTree('_ultrasonic_sensor_8hpp_source.html','
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef _SPIKEAPI_ULTRASONIC_SENSOR_H</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define _SPIKEAPI_ULTRASONIC_SENSOR_H</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;spike/pup/ultrasonicsensor.h&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacespikeapi.html">spikeapi</a> {</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classspikeapi_1_1_ultrasonic_sensor.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classspikeapi_1_1_ultrasonic_sensor.html">UltrasonicSensor</a> {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  pup_device_t *device;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="classspikeapi_1_1_ultrasonic_sensor.html#aae7cc4442536f74b5dae996ebee2cc4a">UltrasonicSensor</a>(pbio_port_id_t port);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  int32_t <a class="code" href="classspikeapi_1_1_ultrasonic_sensor.html#a466fc1c937310b7d4c88ddd05e4293b5">get_distance</a>();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classspikeapi_1_1_ultrasonic_sensor.html#abfe161c24eac33bdd8338b8a48dd45d0">get_presence</a>();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classspikeapi_1_1_ultrasonic_sensor.html#aae7cc4442536f74b5dae996ebee2cc4a">   35</a></span>&#160;<a class="code" href="classspikeapi_1_1_ultrasonic_sensor.html#aae7cc4442536f74b5dae996ebee2cc4a">UltrasonicSensor::UltrasonicSensor</a>(pbio_port_id_t port) {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  device = pup_ultrasonic_sensor_get_device(port);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;} <span class="comment">// namespace spikeapi</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassspikeapi_1_1_ultrasonic_sensor_html"><div class="ttname"><a href="classspikeapi_1_1_ultrasonic_sensor.html">spikeapi::UltrasonicSensor</a></div><div class="ttdef"><b>Definition:</b> <a href="_ultrasonic_sensor_8hpp_source.html#l00013">UltrasonicSensor.hpp:13</a></div></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;spike/pup/ultrasonicsensor.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacespikeapi.html">spikeapi</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classspikeapi_1_1_ultrasonic_sensor.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="classspikeapi_1_1_ultrasonic_sensor.html">UltrasonicSensor</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  pup_device_t *device;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <a class="code" href="classspikeapi_1_1_ultrasonic_sensor.html#aae7cc4442536f74b5dae996ebee2cc4a">UltrasonicSensor</a>(pbio_port_id_t port);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  int32_t <a class="code" href="classspikeapi_1_1_ultrasonic_sensor.html#a466fc1c937310b7d4c88ddd05e4293b5">get_distance</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classspikeapi_1_1_ultrasonic_sensor.html#abfe161c24eac33bdd8338b8a48dd45d0">get_presence</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classspikeapi_1_1_ultrasonic_sensor.html#aae7cc4442536f74b5dae996ebee2cc4a">   37</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="classspikeapi_1_1_ultrasonic_sensor.html#aae7cc4442536f74b5dae996ebee2cc4a">UltrasonicSensor::UltrasonicSensor</a>(pbio_port_id_t port) {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  device = pup_ultrasonic_sensor_get_device(port);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;} <span class="comment">// namespace spikeapi</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassspikeapi_1_1_ultrasonic_sensor_html"><div class="ttname"><a href="classspikeapi_1_1_ultrasonic_sensor.html">spikeapi::UltrasonicSensor</a></div><div class="ttdef"><b>Definition:</b> <a href="_ultrasonic_sensor_8hpp_source.html#l00015">UltrasonicSensor.hpp:15</a></div></div>
 <div class="ttc" id="aclassspikeapi_1_1_ultrasonic_sensor_html_a466fc1c937310b7d4c88ddd05e4293b5"><div class="ttname"><a href="classspikeapi_1_1_ultrasonic_sensor.html#a466fc1c937310b7d4c88ddd05e4293b5">spikeapi::UltrasonicSensor::get_distance</a></div><div class="ttdeci">int32_t get_distance()</div><div class="ttdoc">Get the distance by a ultrasonic sensor.</div><div class="ttdef"><b>Definition:</b> <a href="_ultrasonic_sensor_8cpp_source.html#l00005">UltrasonicSensor.cpp:5</a></div></div>
-<div class="ttc" id="aclassspikeapi_1_1_ultrasonic_sensor_html_aae7cc4442536f74b5dae996ebee2cc4a"><div class="ttname"><a href="classspikeapi_1_1_ultrasonic_sensor.html#aae7cc4442536f74b5dae996ebee2cc4a">spikeapi::UltrasonicSensor::UltrasonicSensor</a></div><div class="ttdeci">UltrasonicSensor(pbio_port_id_t port)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="_ultrasonic_sensor_8hpp_source.html#l00035">UltrasonicSensor.hpp:35</a></div></div>
+<div class="ttc" id="aclassspikeapi_1_1_ultrasonic_sensor_html_aae7cc4442536f74b5dae996ebee2cc4a"><div class="ttname"><a href="classspikeapi_1_1_ultrasonic_sensor.html#aae7cc4442536f74b5dae996ebee2cc4a">spikeapi::UltrasonicSensor::UltrasonicSensor</a></div><div class="ttdeci">UltrasonicSensor(pbio_port_id_t port)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="_ultrasonic_sensor_8hpp_source.html#l00037">UltrasonicSensor.hpp:37</a></div></div>
 <div class="ttc" id="aclassspikeapi_1_1_ultrasonic_sensor_html_abfe161c24eac33bdd8338b8a48dd45d0"><div class="ttname"><a href="classspikeapi_1_1_ultrasonic_sensor.html#abfe161c24eac33bdd8338b8a48dd45d0">spikeapi::UltrasonicSensor::get_presence</a></div><div class="ttdeci">bool get_presence()</div><div class="ttdoc">Get the presence of an object.</div><div class="ttdef"><b>Definition:</b> <a href="_ultrasonic_sensor_8cpp_source.html#l00009">UltrasonicSensor.cpp:9</a></div></div>
 <div class="ttc" id="anamespacespikeapi_html"><div class="ttname"><a href="namespacespikeapi.html">spikeapi</a></div><div class="ttdef"><b>Definition:</b> <a href="_accelerometer_data_8hpp_source.html#l00010">AccelerometerData.hpp:10</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
