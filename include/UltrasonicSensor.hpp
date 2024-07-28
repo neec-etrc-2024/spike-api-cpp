@@ -7,7 +7,9 @@
 #ifndef _SPIKEAPI_ULTRASONIC_SENSOR_H
 #define _SPIKEAPI_ULTRASONIC_SENSOR_H
 
+extern "C" {
 #include "spike/pup/ultrasonicsensor.h"
+}
 
 namespace spikeapi {
 class UltrasonicSensor {
@@ -32,7 +34,7 @@ public:
   bool get_presence();
 };
 
-UltrasonicSensor::UltrasonicSensor(pbio_port_id_t port) {
+inline UltrasonicSensor::UltrasonicSensor(pbio_port_id_t port) {
   device = pup_ultrasonic_sensor_get_device(port);
 }
 

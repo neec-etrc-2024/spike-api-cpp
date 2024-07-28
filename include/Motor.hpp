@@ -7,7 +7,9 @@
 #ifndef _SPIKEAPI_MOTOR_H
 #define _SPIKEAPI_MOTOR_H
 
+extern "C" {
 #include "spike/pup/motor.h"
+}
 
 namespace spikeapi {
 /**
@@ -90,7 +92,9 @@ public:
   void restore_duty_limit(int old_value);
 };
 
-Motor::Motor(pbio_port_id_t port) { dev_ptr = pup_motor_get_device(port); }
+inline Motor::Motor(pbio_port_id_t port) {
+  dev_ptr = pup_motor_get_device(port);
+}
 
 } // namespace spikeapi
 #endif

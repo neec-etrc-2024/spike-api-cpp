@@ -7,7 +7,9 @@
 #ifndef _SPIKEAPI_COLOR_SENSOR_H
 #define _SPIKEAPI_COLOR_SENSOR_H
 
+extern "C" {
 #include "spike/pup/colorsensor.h"
+}
 
 namespace spikeapi {
 
@@ -58,7 +60,7 @@ public:
   int32_t get_ambient();
 };
 
-ColorSensor::ColorSensor(pbio_port_id_t port) {
+inline ColorSensor::ColorSensor(pbio_port_id_t port) {
   device = pup_color_sensor_get_device(port);
 }
 

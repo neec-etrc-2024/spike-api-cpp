@@ -1,6 +1,8 @@
 #include "Hub.hpp"
 
+extern "C" {
 #include "spike/hub/imu.h"
+}
 
 namespace spikeapi {
 
@@ -26,5 +28,6 @@ bool Hub::is_button_pressed(hub_button_t button) {
   hub_button_t pressed;
   hub_button_is_pressed(&pressed);
   return (pressed & button) != 0;
+}
 
 } // namespace spikeapi

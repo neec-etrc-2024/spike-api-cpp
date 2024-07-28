@@ -7,9 +7,12 @@
 #ifndef _SPIKEAPI_HUB_H
 #define _SPIKEAPI_HUB_H
 
-#include "hub/button.h"
-#include "spikeapi/AccelerometerData.hpp"
-#include "spikeapi/GyroscopeData.hpp"
+#include "AccelerometerData.hpp"
+#include "GyroscopeData.hpp"
+
+extern "C" {
+#include "spike/hub/button.h"
+}
 
 namespace spikeapi {
 /**
@@ -42,7 +45,7 @@ public:
   bool is_button_pressed(hub_button_t button);
 };
 
-Hub::Hub() {}
+inline Hub::Hub() {}
 
 } // namespace spikeapi
 

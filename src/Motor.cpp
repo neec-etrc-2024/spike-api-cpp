@@ -2,7 +2,7 @@
 
 namespace spikeapi {
 
-void Motor::setup(pup_direction_t positive_direction, bool reset_count = true) {
+void Motor::setup(pup_direction_t positive_direction, bool reset_count) {
   pup_motor_setup(this->dev_ptr, positive_direction, reset_count);
 }
 
